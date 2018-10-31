@@ -107,6 +107,8 @@ img {
 
 .portfolioimage{
     position: relative;
+    overflow: auto;
+    float: left;
 }
 
 .imagetitle{
@@ -119,36 +121,38 @@ img {
     justify-content: center;
     display: flex;
     font-size: large;
-}
-
-#hangman{
     position: absolute;
+    bottom: 50px;
     left: 30px;
-    bottom: -210px;
 }
 
-#rpg{
-    position: absolute;
-    left: 290px;
-    bottom: -210px;e
-}
-
-#trivia{
-    position: absolute;
-    right: 490px;
-    bottom: 290px;
-}
-
-#info{
-    position: absolute;
+.overlay{
+    position:absolute;
+    top: 30px;
+    bottom: 0px;
     left: 30px;
-    bottom: -470px;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    background-color: #4aaaa5;
 }
 
-#rock{
+.overlaytext{
     position: absolute;
-    left: 290px;
-    bottom: -470px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    font-family:'Georgia', Times, Times New Roman, serif;
+    font-size: x-large;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-decoration: underline;
+}
+
+.portfolioimage:hover .overlay{
+    opacity: .95;
 }
 
 form{
@@ -177,4 +181,9 @@ textarea{
     border: none;
     width: 15%;
 
+}
+
+#About:hover, #Portfolio:hover, #Contact:hover{
+    background: #4aaaa5;
+    color: #fff;
 }
